@@ -252,6 +252,7 @@ export default function TaskDetailModal({ task, isOpen, onClose }) {
                 onClick={() => setIsEditing(true)}
                 className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 px-4 sm:px-6 py-2 rounded-lg transition text-sm sm:text-base flex items-center justify-center gap-2"
               >
+                <Edit className="w-4 h-4" />
                 Edit Task
               </button>
             )}
