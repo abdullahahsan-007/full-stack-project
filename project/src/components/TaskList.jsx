@@ -41,7 +41,8 @@ export default function TaskList() {
             className="bg-gray-900 border border-gray-700 rounded-lg p-4 flex items-center justify-between hover:border-cyan-400 transition"
           >
             {editingTask?.id === task.id ? (
-              // Edit mode
+              
+              
               <div className="flex items-center gap-3 flex-1">
                 <input
                   type="text"
@@ -65,8 +66,8 @@ export default function TaskList() {
                 </button>
               </div>
             ) : (
-              // View mode
-              <>
+              
+                <>
                 <div className="flex items-center gap-3 flex-1">
                   <input
                     type="checkbox"

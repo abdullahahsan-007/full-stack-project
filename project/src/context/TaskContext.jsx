@@ -16,7 +16,7 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [editingTask, setEditingTask] = useState(null);
 
-  // Load tasks from localStorage on mount
+
   useEffect(() => {
     const storedTasks = localStorage.getItem('tasks');
     if (storedTasks) {
@@ -24,14 +24,14 @@ export const TaskProvider = ({ children }) => {
     }
   }, []);
 
-  // Save tasks to localStorage whenever they change
+
   useEffect(() => {
     if (tasks.length >= 0) {
       localStorage.setItem('tasks', JSON.stringify(tasks));
     }
   }, [tasks]);
 
-  // Add new task
+
   const addTask = (taskText) => {
     if (!taskText.trim()) return;
     
@@ -45,7 +45,7 @@ export const TaskProvider = ({ children }) => {
     setTasks([...tasks, newTask]);
   };
 
-  // Delete task
+
   const deleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
     if (editingTask?.id === id) {
@@ -53,7 +53,7 @@ export const TaskProvider = ({ children }) => {
     }
   };
 
-  // Update task
+
   const updateTask = (id, newText) => {
     if (!newText.trim()) return;
     
@@ -63,14 +63,14 @@ export const TaskProvider = ({ children }) => {
     setEditingTask(null);
   };
 
-  // Toggle task completion
+
   const toggleComplete = (id) => {
     setTasks(tasks.map(task =>
       task.id === id ? { ...task, completed: !task.completed } : task
     ));
   };
 
-  // Delete all tasks
+
   const deleteAllTasks = () => {
     setTasks([]);
     setEditingTask(null);

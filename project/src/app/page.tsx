@@ -30,7 +30,7 @@ export default function Page() {
         <h1 className="text-4xl font-bold text-cyan-400 mb-10">Add Task</h1>
 
         <div className="flex flex-col md:flex-row gap-8 bg-black border border-gray-700 rounded-lg p-8 w-full max-w-3xl">
-          {/* Task Input */}
+          
           <div className="flex flex-col gap-4 md:w-1/2">
             <label htmlFor="task" className="text-white font-medium">
               Task
@@ -63,7 +63,7 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Task List */}
+        
         <TaskList />
       </section>
     </>
