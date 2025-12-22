@@ -1,4 +1,6 @@
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import { TaskProvider } from "@/context/TaskContext";
 
 export default function RootLayout({
@@ -9,9 +11,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TaskProvider>
-          {children}
-        </TaskProvider>
+        <AuthProvider>
+          <ThemeProvider>
+            <TaskProvider>
+              {children}
+            </TaskProvider>
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );
