@@ -1,5 +1,4 @@
 'use client';
-
 import { createContext, useState, useEffect, useContext } from 'react';
 
 const ThemeContext = createContext();
@@ -19,7 +18,12 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     setTheme(savedTheme);
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    
+    // Remove both classes first, then add the correct one
+    document.documentElement.classList.remove('dark', 'light');
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
   }, []);
 
   // Toggle theme
@@ -27,7 +31,12 @@ export const ThemeProvider = ({ children }) => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    
+    // Remove both classes first, then add the correct one
+    document.documentElement.classList.remove('dark', 'light');
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
   };
 
   const value = {

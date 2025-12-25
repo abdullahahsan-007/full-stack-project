@@ -44,12 +44,12 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-gray-800 border border-gray-700 rounded-xl sm:rounded-2xl shadow-2xl p-6 sm:p-8">
           <div className="text-center mb-6 sm:mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Create Account</h1>
-            <p className="text-sm sm:text-base text-gray-400">Join us and start managing your tasks</p>
+            <p className="text-sm sm:text-base text-gray-400">start managing your tasks</p>
           </div>
 
           {error && (
@@ -71,12 +71,12 @@ export default function Signup() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 className="w-full border border-gray-600 bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition"
-                placeholder="John Doe"
+                placeholder="Full Name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-white font-medium mb-2 flex items-center gap-2">
+              <label htmlFor="email" className=" text-white font-medium mb-2 flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 Email Address
               </label>
@@ -87,7 +87,7 @@ export default function Signup() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full border border-gray-600 bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition"
-                placeholder="you@example.com"
+                placeholder="email"
               />
             </div>
 
@@ -103,7 +103,7 @@ export default function Signup() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 className="w-full border border-gray-600 bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition"
-                placeholder="••••••••"
+                placeholder="Password"
               />
             </div>
 
@@ -119,7 +119,7 @@ export default function Signup() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 className="w-full border border-gray-600 bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition"
-                placeholder="••••••••"
+                placeholder="Confirm Password"
               />
             </div>
 

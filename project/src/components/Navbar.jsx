@@ -21,7 +21,7 @@ export default function Navbar() {
       <ul className="flex flex-col sm:flex-row justify-between items-center w-full max-w-7xl mx-auto p-3 sm:p-5 gap-3 sm:gap-0">
         
         <li className="text-black dark:text-white font-bold text-lg sm:text-xl">
-          <Link href={user ? "/dashboard" : "/"}>TaskManager Pro</Link>
+          <Link href={user ? "/dashboard" : "/"}>TaskManager</Link>
         </li>
 
         <li className="flex flex-wrap gap-3 sm:gap-6 items-center justify-center">
@@ -39,7 +39,7 @@ export default function Navbar() {
                 onClick={toggleTheme}
                 className="p-1.5 sm:p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition"
                 aria-label="Toggle theme"
-              >
+                >
                 {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
               <span className="text-gray-700 dark:text-gray-400 text-xs sm:text-sm hidden sm:inline">

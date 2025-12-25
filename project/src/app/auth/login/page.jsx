@@ -36,7 +36,7 @@ export default function Login() {
         <div className="bg-gray-800 border border-gray-700 rounded-xl sm:rounded-2xl shadow-2xl p-6 sm:p-8">
           <div className="text-center mb-6 sm:mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Task Manager</h1>
-            <p className="text-sm sm:text-base text-gray-400">Welcome back! Please login to continue</p>
+            <p className="text-sm sm:text-base text-gray-400"> Please login to continue</p>
           </div>
 
           {error && (
@@ -58,7 +58,7 @@ export default function Login() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full border border-gray-600 bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition"
-                placeholder="you@example.com"
+                placeholder="email"
               />
             </div>
 
@@ -74,7 +74,7 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 className="w-full border border-gray-600 bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white transition"
-                placeholder="••••••••"
+                placeholder="Password"
               />
             </div>
 
